@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 2</title>
+  </head>
+  <body>
+    <button id="btn">Adicionar Ação</button>
+    <script>
+      const botao = document.getElementById("btn");
+      let count = 0;
+      botao.addEventListener("click", handleClick);
+      function handleClick() {
+        if (count >= 3) {
+          console.log("limite atingido");
+          botao.removeEventListener("click", handleClick);
+          console.log("Botão desativado");
+        } else {
+          count = count + 1;
+          console.log(count);
+        }
+      }
+    </script>
+  </body>
+</html>

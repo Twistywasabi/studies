@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document Index Gabaritado</title>
+  </head>
+  <body>
+    <h2>Eventos em elementos HTML Gabaritado</h2>
+    <!-- Resolução Exercício 1 -->
+    <p onmouseover="mudarCor(this,'green')" onmouseout="mudarCor(this,'black')">
+      Passe o mouse aqui para mudar a cor do texto.
+    </p>
+    <!-- Resolução Exercício 2 -->
+    <button onclick="clicarBotao()">Clique aqui</button>
+    <!-- Resolução Exercício 3 -->
+    <input
+      type="text"
+      placeholder="Digite aqui"
+      onfocus="campoEmFoco(this);"
+      onblur="foraEmFoco(this);"
+    />
+    <!-- Resolução Exercício 4 -->
+    <img
+      src="imagem1.png"
+      alt="Imagem misteriosa"
+      onmouseover="mudarImagemFacil(this, 'imagem2.png')"
+      onmouseout="mudarImagemFacil(this, 'imagem1.png');"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>

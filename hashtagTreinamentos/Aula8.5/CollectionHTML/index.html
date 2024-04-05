@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coleções</title>
+  </head>
+  <body>
+    <h1 style="font-size: small; color: blue">
+      Acessando elementos do HTMLCollection e nodeList
+    </h1>
+    <ul id="lista">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <h2 style="font-size: small; color: red">NodeList</h2>
+    <div id="conteudo">
+      <p>Parágrafo 1</p>
+      <p>Parágrafo 2</p>
+      <p>Parágrafo 3</p>
+    </div>
+    <script>
+      const listaItens = document
+        .getElementById("lista")
+        .getElementsByTagName("li");
+
+      //Acessar o Segundo elemento da HTML collection
+      console.log("Segundo elemento: ", listaItens[1]);
+
+      const paragrafos = document
+        .getElementById("conteudo")
+        .querySelectorAll("p");
+
+      //Acessar os elementos do node list usando loop for
+
+      console.log("Acessando elementos do nodeList loop for:");
+      for (let i = 0; i < paragrafos.length; i++) {
+        console.log(paragrafos[i]);
+
+        // Acessar o segundo elemento do nodelist
+        console.log("Acessando o segundo elemento node list", paragrafos[1]);
+      }
+    </script>
+  </body>
+</html>

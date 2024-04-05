@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body id="corpo">
+    <h1>Prevenir Rolagem para Baixo e Remover Event Listener</h1>
+    <script>
+      const corpo = document.getElementById("corpo");
+      let contadorTeclasBaixoApertado = 0;
+      corpo.addEventListener("keydown", preventScroll);
+      function preventScroll(evento) {
+        contadorTeclasBaixoApertado = contadorTeclasBaixoApertado + 1;
+        console.log(contadorTeclasBaixoApertado);
+        if (evento.key === "ArrowDown") {
+          evento.preventDefault();
+          console.log("Scrool com tecla desativado");
+        }
+        if (contadorTeclasBaixoApertado == 10) {
+          evento.preventDefault();
+          corpo.removeEventListener("keydown", preventScroll);
+          console.log("eventListener removido");
+        }
+      }
+    </script>
+  </body>
+</html>

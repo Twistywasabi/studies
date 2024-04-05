@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 01</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div id="changeColor"></div>
+    <script>
+      const changeColorJS = document.getElementById("changeColor");
+      function handleMouseOver() {
+        console.log("oi");
+        changeColorJS.style.backgroundColor = "red";
+      }
+      function handleMouseOut() {
+        console.log("tchau");
+        changeColorJS.style.backgroundColor = "yellow";
+      }
+      changeColorJS.addEventListener("mouseover", handleMouseOver);
+      changeColorJS.addEventListener("mouseout", handleMouseOut);
+    </script>
+  </body>
+</html>

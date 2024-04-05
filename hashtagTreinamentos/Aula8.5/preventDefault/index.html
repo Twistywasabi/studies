@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prevent Default - addEventListener</title>
+  </head>
+  <body>
+    <h1>Prevent Default</h1>
+    <a href="https://www.hashtagtreinamentos.com/curso-javascript" id="meuLink"
+      >Clique aqui para ir até a página do Intensivão javascript</a
+    >
+    <script>
+      //Selecionamos o elemento link (ancora)
+      const link = document.getElementById("meuLink");
+      //Adicionar um evento de clique ao link
+      meuLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log("O comportamento padrão foi previnido");
+        // alterar para outa página
+        window.location.href = "https://google.com";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  background-color: rgb(70, 70, 220);
+  color: rgb(216, 145, 13);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(43, 43, 132);
+}
+
+button:focus {
+  outline: none;
+}
