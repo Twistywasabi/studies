@@ -25,9 +25,9 @@ function digPow(n, p) {
   //Pego o primeiro algarismo do numero n e elevo ele a p
 
   const firstN = numberStringSplit[0];
-  console.log("Primeiro Número = ", firstNconverted);
+  console.log("Primeiro Número = ", firstN);
   var i = 1;
-  var firstNPowered = firstN;
+  var firstNPowered = parseInt(firstN);
   while (i < numberp) {
     firstNPowered = firstNPowered * firstN;
     i++;
@@ -40,7 +40,7 @@ function digPow(n, p) {
   const secondN = numberStringSplit[1];
   console.log("Segundo Número = ", secondN);
   var j = 1;
-  var secondNPowered = secondN;
+  var secondNPowered = parseInt(secondN);
   while (j < numberp + 1) {
     secondNPowered = secondNPowered * secondN;
     j++;
@@ -56,10 +56,11 @@ function digPow(n, p) {
   // Depois pego essa soma e divido por n
 
   const numberK = sumN / numberN;
-  console.log("A letra K é: ", numberK);
 
   // o resultado é k
   // se não existir, definir k= -1
+
+  console.log("A letra K é: ", numberK);
 }
 
-digPow(89, 1);
+digPow(92, 1);
