@@ -22,45 +22,72 @@ function digPow(n, p) {
   var numberStringSplit = numberN.toString().split("");
   console.log(numberStringSplit);
 
-  //Pego o primeiro algarismo do numero n e elevo ele a p
+  //Criar um loop que vai repetir baseado na quantidade de algarismos do numero N
+  ////Contar quandos números temos no array (indexAmountNumberN) numberStringsSplit
 
-  const firstN = numberStringSplit[0];
+  const indexAmountNumberN = numberStringSplit.length;
+
+  ////Com indexAmountNumberN, Ele determina quantas vezes vou repetir a operação
+
+  console.log(
+    "Quantidade de algarismos do numero N (indexAmountNumberN) = ",
+    indexAmountNumberN
+  );
+
+  var poweredNumberNInloopArray = [];
+  //// Criar um laço para repetira a operação
+
+  let i = 0;
+
+  for (let k = 0; k < indexAmountNumberN; k++) {
+    console.log(`${k + 1}º Número usado`, numberStringSplit[k]);
+    poweredNumberNInloop = parseInt(numberStringSplit[k]);
+    while (i <= numberp + 1) {
+      poweredNumberNInloop =
+        poweredNumberNInloop * parseInt(numberStringSplit[k]);
+      console.log("A potência deu ", poweredNumberNInloop);
+      i++;
+    }
+    poweredNumberNInloopArray.push(poweredNumberNInloop);
+    console.log(poweredNumberNInloopArray);
+  }
+
+  /*   const firstN = numberStringSplit[0];
   console.log("Primeiro Número = ", firstN);
   var i = 1;
   var firstNPowered = parseInt(firstN);
   while (i < numberp) {
     firstNPowered = firstNPowered * firstN;
     i++;
-  }
+  } */
 
-  console.log("firstPoweredN = ", firstNPowered);
+  /*   console.log("firstPoweredN = ", firstNPowered); */
 
   //Pego o segundo numero do algarismo e elevo ele a (p +1)
 
-  const secondN = numberStringSplit[1];
+  /*   const secondN = numberStringSplit[1];
   console.log("Segundo Número = ", secondN);
   var j = 1;
   var secondNPowered = parseInt(secondN);
   while (j < numberp + 1) {
     secondNPowered = secondNPowered * secondN;
     j++;
-  }
+  } */
 
-  console.log("secondPoweredN = ", secondNPowered);
+  /*   console.log("secondPoweredN = ", secondNPowered); */
 
   // Faço a soma desse primeiro algarismo elevado e do segundo algarismo elevado
 
-  sumN = secondNPowered + firstNPowered;
-  console.log("A soma dos firstPoweredN e secondPoweredN é", sumN);
+  /*   sumN = secondNPowered + firstNPowered;
+  console.log("A soma dos firstPoweredN e secondPoweredN é", sumN); */
 
   // Depois pego essa soma e divido por n
 
-  const numberK = sumN / numberN;
+  /*   const numberK = sumN / numberN; */
 
   // o resultado é k
   // se não existir, definir k= -1
-
-  console.log("A letra K é: ", numberK);
+  /*   console.log("A letra K é: ", numberK); */
 }
 
-digPow(92, 1);
+digPow(89, 1);
