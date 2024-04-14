@@ -35,59 +35,32 @@ function digPow(n, p) {
   );
 
   var poweredNumberNInloopArray = [];
-  //// Criar um laço para repetira a operação
-
-  let i = 0;
+  //// Criar um laço para repetira a operação de fazer potência do número N baseado no número P que vai subir de 1 em 1
 
   for (let k = 0; k < indexAmountNumberN; k++) {
     console.log(`${k + 1}º Número usado`, numberStringSplit[k]);
     poweredNumberNInloop = parseInt(numberStringSplit[k]);
-    while (i <= numberp + 1) {
-      poweredNumberNInloop =
-        poweredNumberNInloop * parseInt(numberStringSplit[k]);
-      console.log("A potência deu ", poweredNumberNInloop);
-      i++;
-    }
+    poweredNumberNInloop = poweredNumberNInloop ** (numberp + k);
     poweredNumberNInloopArray.push(poweredNumberNInloop);
     console.log(poweredNumberNInloopArray);
   }
 
-  /*   const firstN = numberStringSplit[0];
-  console.log("Primeiro Número = ", firstN);
-  var i = 1;
-  var firstNPowered = parseInt(firstN);
-  while (i < numberp) {
-    firstNPowered = firstNPowered * firstN;
-    i++;
-  } */
-
-  /*   console.log("firstPoweredN = ", firstNPowered); */
-
-  //Pego o segundo numero do algarismo e elevo ele a (p +1)
-
-  /*   const secondN = numberStringSplit[1];
-  console.log("Segundo Número = ", secondN);
-  var j = 1;
-  var secondNPowered = parseInt(secondN);
-  while (j < numberp + 1) {
-    secondNPowered = secondNPowered * secondN;
-    j++;
-  } */
-
-  /*   console.log("secondPoweredN = ", secondNPowered); */
-
   // Faço a soma desse primeiro algarismo elevado e do segundo algarismo elevado
 
-  /*   sumN = secondNPowered + firstNPowered;
-  console.log("A soma dos firstPoweredN e secondPoweredN é", sumN); */
+  const sumN = 0;
 
-  // Depois pego essa soma e divido por n
+  const sumNWithArray = poweredNumberNInloopArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    sumN
+  );
 
-  /*   const numberK = sumN / numberN; */
+  console.log("A soma dos firstPoweredN e secondPoweredN é", sumNWithArray);
+
+  const numberK = sumNWithArray / numberN;
 
   // o resultado é k
   // se não existir, definir k= -1
-  /*   console.log("A letra K é: ", numberK); */
+  console.log("A letra K é: ", numberK);
 }
 
-digPow(89, 1);
+digPow(46288, 3);
