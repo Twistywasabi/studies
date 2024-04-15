@@ -56,11 +56,18 @@ function digPow(n, p) {
 
   console.log("A soma dos firstPoweredN e secondPoweredN é", sumNWithArray);
 
-  const numberK = sumNWithArray / numberN;
+  let numberK = sumNWithArray / numberN;
+
+  if (Number.isInteger(numberK) && numberK > 0) {
+    console.log("A letra K é: ", numberK);
+  } else {
+    numberK = -1;
+    console.log("A letra K é ", numberK);
+  }
 
   // o resultado é k
   // se não existir, definir k= -1
-  console.log("A letra K é: ", numberK);
+  return numberK;
 }
 
 digPow(46288, 3);
