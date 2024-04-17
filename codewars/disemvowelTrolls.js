@@ -43,4 +43,4 @@ function disemvowel(str) {
   return newString;
 }
 
-disemvowel("MAcaCOs MaiIs FortEes JuUntos");
+disemvowel("MAaiIs FortEes JuUntos");
