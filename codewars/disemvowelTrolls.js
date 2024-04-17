@@ -11,17 +11,36 @@ Note: for this kata y isn't considered a vowel. */
 
 function disemvowel(str) {
   // recebo uma string
-  // Verifico se tem a, e, i, o, u
 
-  if (str.includes("a")) {
-    str = str.replace("a", "");
-    console.log(str);
-    // Se tiver, remover
-    // vou remover substituindo "A, E, I, O, U" por vazio ("")
-  } else {
-    console.log("Sem letras A");
-  }
-  return str;
+  console.log(str);
+
+  // Verifico se tem a, e, i, o, u
+  // se tiver vogais, eu removo
+
+  let stringArray = str.split("");
+  console.log(stringArray);
+
+  const stringFilterArray = stringArray.filter(
+    (stringArray) =>
+      stringArray != "A" &&
+      stringArray != "a" &&
+      stringArray != "E" &&
+      stringArray != "e" &&
+      stringArray != "I" &&
+      stringArray != "i" &&
+      stringArray != "O" &&
+      stringArray != "o" &&
+      stringArray != "U" &&
+      stringArray != "u"
+  );
+  console.log(stringFilterArray);
+
+  const newString = stringFilterArray.join("");
+
+  //mostro a nova string
+  console.log(newString);
+
+  return newString;
 }
 
-disemvowel("Testeba");
+disemvowel("MAcaCOs MaiIs FortEes JuUntos");
