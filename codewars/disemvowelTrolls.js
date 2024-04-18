@@ -35,12 +35,12 @@ function disemvowel(str) {
   );
   console.log(stringFilterArray);
 
-  const newString = stringFilterArray.join("");
+  str = stringFilterArray.join("");
 
   //mostro a nova string
-  console.log(newString);
+  console.log(str);
 
-  return newString;
+  return str;
 }
 
 disemvowel("MAaiIs FortEes JuUntos");
