@@ -19,7 +19,7 @@ public class SimulacaoBancaria {
                     System.out.println("Qual será o valor a ser depositado ?");
                     int valorDepositado = scanner.nextInt();
                     saldo = saldo + valorDepositado;
-                    System.out.println("Saldo Atual: " + saldo);
+                    System.out.println("Saldo Atual: R$" + saldo);
                     break;
                 case 2:
                     // TODO: Ler o valor a ser sacado e verificar/imprimir se há saldo suficiente.
@@ -30,7 +30,7 @@ public class SimulacaoBancaria {
                         System.out.println("Saldo insuficiente");
                     } else {
                         saldo = saldo - valorSacado;
-                        System.out.println("Saldo Atual: " + saldo);
+                        System.out.println("Saldo Atual: R$" + saldo);
                     }
                     break;
                 case 3:
