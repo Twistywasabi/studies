@@ -36,6 +36,7 @@ public class SimulacaoBancaria {
                 case 3:
                     // TODO: Exibir o saldo atual da conta.
                     System.out.println("Opção 3 selecionada");
+                    System.out.println("Saldo atual: R$");
                     break;
                 case 0:
                     System.out.println("Programa encerrado.");
