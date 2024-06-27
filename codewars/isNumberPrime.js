@@ -16,14 +16,13 @@ is_prime(-1)  false  */
 function isPrime(num) {
   let isNumberPrime;
 
-  if (num <= 0) {
+  if (num <= 1) {
     isNumberPrime = false;
   } else {
     let arrayQuotient = [];
     for (let i = 1; i <= num; i++) {
       if (num % i == 0) {
         arrayQuotient.push(i);
-        console.log(arrayQuotient);
       }
     }
     if (arrayQuotient.length >= 3) {
