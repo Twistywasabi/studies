@@ -2,10 +2,13 @@ class PaginationHelper {
   constructor(collection, itemsPerPage) {
     // The constructor takes in an array of items and a integer indicating how many
     // items fit within a single page
-    for (let index = 0; index < collection.length; index++) {
-      const element = array[index];
-      console.llog(element);
-    }
+    this.collection = collection;
+    this.itemsPerPage = itemsPerPage;
+  }
+
+  printInfo() {
+    console.log(this.collection);
+    console.log(this.itemsPerPage);
   }
 
   itemCount() {
@@ -24,6 +27,5 @@ class PaginationHelper {
   }
 }
 
-const teste = new PaginationHelper();
-
-con;
+const teste = new PaginationHelper(["a", "b", "c", "d", "e", "f"], 4);
+teste.printInfo();
